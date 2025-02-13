@@ -18,7 +18,7 @@ def main():
     while True:
         user_input = input("Input: ")
         response = chatgpt_query(user_input)
-        print(print(response["choices"][0]["message"]["content"]))
+        print(response["choices"][0]["message"]["content"])
 
 
 def chatgpt_query(prompt):
