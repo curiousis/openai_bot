@@ -17,8 +17,11 @@ old_data = []
 def main():
     while True:
         user_input = input("Input: ")
-        response = chatgpt_query(user_input)
-        print(response["choices"][0]["message"]["content"])
+        if user_input == "stop":
+            break
+        else:
+            response = chatgpt_query(user_input)
+            print(response["choices"][0]["message"]["content"])
 
 
 def chatgpt_query(prompt):
